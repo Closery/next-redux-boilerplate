@@ -1,0 +1,20 @@
+{
+	"examples": [
+		{
+			"id": 1,
+			"description": "Example 1"
+		},
+		{
+			"id": 2,
+			"description": "Example 2"
+		},
+		{
+			"id": 3,
+			"description": "Example 3"
+		},
+		{
+			"id": 4,
+			"description": "Example 4"
+		}
+	]
+}
