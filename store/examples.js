@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { apiCallBegan } from './middleware/api'
 
 const slice = createSlice({
 	name: 'examples',
@@ -73,6 +74,59 @@ const {
 export default slice.reducer
 
 // Action Creators
+const url = '/examples'
+
+export const GET_ExampleList = () =>
+	apiCallBegan({
+		url,
+		method: 'get',
+		onStart: requestStarted.type,
+		onError: requestFailed.type,
+		onSuccess: examplesReceived.type,
+		onSuccessMsg: 'All data fetched successfully',
+	})
+
+export const GET_ExampleDetail = (id) =>
+	apiCallBegan({
+		url: `${url}/${id}`,
+		method: 'get',
+		onStart: requestStarted.type,
+		onError: exampleDetailFailed.type,
+		onSuccess: exampleDetailReceived.type,
+		onSuccessMsg: 'Data fetched successfully',
+	})
+
+export const POST_CreateExample = (example) =>
+	apiCallBegan({
+		url,
+		method: 'post',
+		data: example,
+		onStart: requestStarted.type,
+		onError: requestFailed.type,
+		onSuccess: exampleCreated.type,
+		onSuccessMsg: 'Data created successfully',
+	})
+
+export const PATCH_UpdateExample = (id, example) =>
+	apiCallBegan({
+		url: `${url}/${id}`,
+		method: 'patch',
+		data: example,
+		onStart: requestStarted.type,
+		onError: requestFailed.type,
+		onSuccess: exampleUpdated.type,
+		onSuccessMsg: 'Data updated successfully',
+	})
+
+export const DELETE_Example = (id) =>
+	apiCallBegan({
+		url: `${url}/${id}`,
+		method: 'delete',
+		onStart: requestStarted.type,
+		onError: requestFailed.type,
+		onSuccess: exampleRemoved.type,
+		onSuccessMsg: 'Data deleted successfully',
+	})
 
 // Selector
 export const getError = createSelector(
