@@ -73,4 +73,29 @@ const {
 export default slice.reducer
 
 // Action Creators
+
 // Selector
+export const getError = createSelector(
+	(state) => state.entities.examples.error,
+	(error) => error
+)
+
+export const getIsDeleted = createSelector(
+	(state) => state.entities.examples.isDeleted,
+	(isDeleted) => isDeleted
+)
+
+export const getLoadingState = createSelector(
+	(state) => state.entities.examples.loading,
+	(loading) => loading
+)
+
+export const getExampleList = createSelector(
+	(state) => state.entities.examples.list,
+	(list) => list
+)
+
+export const getExampleDetail = createSelector(
+	(state) => state.entities.examples.detail,
+	(detail) => detail
+)
