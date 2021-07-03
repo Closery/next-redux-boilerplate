@@ -6,7 +6,7 @@ This boilerplate is created for myself so I'm not claiming that this is a produc
 
 ## Getting Started
 
-Before run the development server, remove `_(dash)` from `_.env.local` then run the development server:
+Before running the development server, remove `_(dash)` from `_.env.local` then run the development server:
 
 ```bash
 npm run dev
