@@ -1,10 +1,11 @@
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
 import { GET_ExampleDetail, DELETE_Example, getError, getExampleDetail, getIsDeleted, getLoadingState } from '../../store/examples'
 import styles from '../../styles/Home.module.css'
 import Layout from '../../components/Layout'
 import Loading from '../../components/Loading'
+import EditSection from '../../components/EditSection'
 
 export default function Detail({ id }) {
 	const dispatch = useDispatch()
@@ -13,6 +14,7 @@ export default function Detail({ id }) {
 	const isDeleted = useSelector(getIsDeleted)
 	const loading = useSelector(getLoadingState)
 	const exampleDetail = useSelector(getExampleDetail)
+	const [showEditSection, setShowEditSection] = useState(false)
 
 	useEffect(() => {
 		if (!exampleDetail.id && !error && !isDeleted) dispatch(GET_ExampleDetail(id))
@@ -41,7 +43,13 @@ export default function Detail({ id }) {
 								<code className={styles.code}>{JSON.stringify(exampleDetail, null, 4)}</code>
 							</p>
 
+							<EditSection show={showEditSection} />
+
 							<p className={styles.buttons}>
+								<button className={styles.button} onClick={() => setShowEditSection(!showEditSection)}>
+									Edit Example
+								</button>
+
 								<button className={styles.button} onClick={DeleteExample}>
 									Delete Example
 								</button>
