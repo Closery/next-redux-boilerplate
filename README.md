@@ -18,11 +18,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-When you run the development server, it will also run an API which uses Next API routes for Redux examples.
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/examples](http://localhost:3000/api/examples). This endpoint can be edited in `pages/api/examples.js`.
+When you run the development server, it will also run an API which uses Next API Routes for Redux examples.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/examples](http://localhost:3000/api/examples). These endpoints can be edited in `pages/api/examples`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-(These API Endpoints are created for Redux usage examples)
 
 ## Learn More
 
