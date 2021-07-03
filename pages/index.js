@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
+import CreateSection from '../components/CreateSection'
 import ListExamples from '../components/ListExamples'
 
 export default function Home() {
+	const [showCreateSection, setShowCreateSection] = useState(false)
+
 	return (
 		<Layout>
 			<div className={styles.container}>
@@ -17,8 +21,14 @@ export default function Home() {
 					</p>
 
 					<p className={styles.description}>
-						You can see these <code className={styles.code}>examples</code> below.
+						You can see these <code className={styles.code}>examples</code> below or you can
+						<span className={styles.createExample} onClick={() => setShowCreateSection(!showCreateSection)}>
+							create a new example
+						</span>
+						.
 					</p>
+
+					<CreateSection show={showCreateSection} />
 
 					<ListExamples />
 				</main>
