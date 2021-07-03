@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS with Redux
+
+This is a [Next.js](https://nextjs.org/) project with [Redux](https://github.com/reduxjs/redux), [React-Redux](https://github.com/reduxjs/react-redux) and [Redux-Toolkit](https://github.com/reduxjs/redux-toolkit)
+This boilerplate is created for myself so I'm not claiming that this is a production ready boilerplate.
 
 ## Getting Started
 
@@ -14,21 +17,32 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+When you run the development server, it will also run an API which uses Next API routes for Redux examples.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/examples](http://localhost:3000/api/examples). This endpoint can be edited in `pages/api/examples.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+(These API Endpoints are created for Redux usage examples)
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Project's dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [next](https://github.com/vercel/next.js/)
+-   [axios](https://github.com/axios/axios)
+-   [react](https://github.com/facebook/react)
+-   [redux](https://github.com/reduxjs/redux)
+-   [react-redux](https://github.com/reduxjs/react-redux)
+-   [reduxjs-toolkit](https://github.com/reduxjs/redux-toolkit)
+-   [react-hot-toast](https://github.com/timolins/react-hot-toast)
+-   [react-spinners](https://github.com/davidhu2000/react-spinners)
+-   [simple-json-db](https://github.com/nmaggioni/Simple-JSONdb)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To learn more about Next.js and Redux take a look at the following resources:
 
-## Deploy on Vercel
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Redux Documentation](https://redux.js.org/introduction/getting-started) - learn about Redux features and API.
+-   [Redux-Toolkit Documentation](https://redux-toolkit.js.org/introduction/getting-started) - learn about Redux-Toolkit features and API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Pull requests are welcome. For major changes and advices, please open an issue first to discuss what you would like to change.
