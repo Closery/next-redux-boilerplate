@@ -1,6 +1,7 @@
 # NextJS with Redux
 
-This is a [Next.js](https://nextjs.org/) project with [Redux](https://github.com/reduxjs/redux), [React-Redux](https://github.com/reduxjs/react-redux) and [Redux-Toolkit](https://github.com/reduxjs/redux-toolkit)
+This is a [Next.js](https://nextjs.org/) project with [Redux](https://github.com/reduxjs/redux), [React-Redux](https://github.com/reduxjs/react-redux) and [Redux-Toolkit](https://github.com/reduxjs/redux-toolkit).
+
 This boilerplate is created for myself so I'm not claiming that this is a production ready boilerplate.
 
 ## Getting Started
